@@ -7,9 +7,6 @@ import { authRoutes } from './routes/auth'
 
 const app = fastify()
 
-app.register(memoriesRoutes)
-app.register(authRoutes)
-
 app.register(cors, {
   origin: true,
 })
@@ -17,6 +14,9 @@ app.register(cors, {
 app.register(jwt, {
   secret: 'spacetime',
 })
+
+app.register(memoriesRoutes)
+app.register(authRoutes)
 
 app
   .listen({

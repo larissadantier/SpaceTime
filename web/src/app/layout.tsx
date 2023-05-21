@@ -23,6 +23,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="en">
       <body
         className={`${roboto.variable} ${baiJamjure.variable} bg-gray-900 font-sans text-gray-100`}
+        suppressHydrationWarning={true}
       >
         {children}
       </body>
